@@ -24,7 +24,7 @@ class SingleBook extends Component {
               {this.props.book.title}
             </Card.Title>
           </Card.Body>
-          {this.state.selected && <CommentArea />}
+          {this.state.selected && <CommentArea asin={this.props.book.asin} />}
         </Card>
       </>
     );
