@@ -4,7 +4,7 @@ class CommentsListTest extends Component {
   fetchComments = async () => {
     try {
       const res = await fetch(
-        "https://striveschool-api.herokuapp.com/api/comments/0345535413",
+        "https://striveschool-api.herokuapp.com/api/comments/",
         {
           headers: {
             Authorization:

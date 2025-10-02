@@ -23,7 +23,12 @@ class SingleBook extends Component {
           <Card.Body>
             <Card.Title style={{ color: "black" }}>{book.title}</Card.Title>
           </Card.Body>
-          {this.state.selected && <CommentArea asin={book.asin} />}
+          {this.state.selected && (
+            <CommentArea
+              asin={book.asin}
+              onClick={(e) => e.stopPropagation()}
+            />
+          )}
         </Card>
       </>
     );

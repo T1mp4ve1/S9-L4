@@ -40,20 +40,17 @@ class AddComment extends Component {
 
   render() {
     return (
-      <div>
+      <div onClick={(e) => e.stopPropagation()}>
         <Form onSubmit={this.addComment}>
           <Form.Group className="mb-2">
             <Form.Label>Recensione</Form.Label>
             <Form.Control
               type="text"
               placeholder="Inserisci qui il testo"
-              value={this.state.comment.comment}
+              value={this.state.comment}
               onChange={(e) =>
                 this.setState({
-                  comment: {
-                    ...this.state.comment,
-                    comment: e.target.value,
-                  },
+                  comment: e.target.value,
                 })
               }
             />
@@ -65,10 +62,7 @@ class AddComment extends Component {
               value={this.state.comment.rate}
               onChange={(e) =>
                 this.setState({
-                  comment: {
-                    ...this.state.comment,
-                    rate: e.target.value,
-                  },
+                  rate: e.target.value,
                 })
               }
             >

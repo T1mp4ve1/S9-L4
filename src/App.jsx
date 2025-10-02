@@ -5,7 +5,7 @@ import MyFooter from "./components/MyFooter";
 import Welcome from "./components/Welcome";
 import { Container } from "react-bootstrap";
 import BookList from "./components/BookList";
-// import CommentsListTest from "./components/CommentsListTest";
+import CommentsListTest from "./components/CommentsListTest";
 
 import fantasy from "./data/fantasy.json";
 
@@ -15,7 +15,7 @@ function App() {
       <MyNav />
       <Container>
         <Welcome />
-        {/* <CommentsListTest /> */}
+        <CommentsListTest />
         <BookList books={fantasy} />
       </Container>
       <MyFooter />
