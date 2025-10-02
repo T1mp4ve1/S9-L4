@@ -54,7 +54,6 @@ class AddComment extends Component {
                 })
               }
             />
-        
           </Form.Group>
           <Form.Group className="mb-2">
             <Form.Label>Valutazione</Form.Label>
