@@ -1,5 +1,6 @@
 import { Component } from "react";
 import CommentsList from "./CommentsList";
+import AddComment from "./AddComment";
 // import AddComment from "./AddComment";
 
 class CommentArea extends Component {
@@ -40,6 +41,7 @@ class CommentArea extends Component {
       <div id="commentArea" className="text-light p-2">
         <h3>Commenti:</h3>
         <CommentsList comments={this.state.comments} />
+        <AddComment />
       </div>
     );
   }

@@ -8,6 +8,7 @@ class SingleBook extends Component {
   };
 
   render() {
+    const { book } = this.props;
     return (
       <>
         <Card
@@ -18,13 +19,11 @@ class SingleBook extends Component {
               : "3px solid rgba(0, 0, 0, 0)",
           }}
         >
-          <Card.Img variant="top" src={this.props.book.img} />
+          <Card.Img variant="top" src={book.img} />
           <Card.Body>
-            <Card.Title style={{ color: "black" }}>
-              {this.props.book.title}
-            </Card.Title>
+            <Card.Title style={{ color: "black" }}>{book.title}</Card.Title>
           </Card.Body>
-          {this.state.selected && <CommentArea asin={this.props.book.asin} />}
+          {this.state.selected && <CommentArea asin={book.asin} />}
         </Card>
       </>
     );
